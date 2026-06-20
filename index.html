@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>contenidovisual.ok · Contenido gastronómico estratégico</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 100px 32px 90px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: center;
+  }
+
+  .hero-slogan {
+    font-family: var(--serif);
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 600;
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+    margin-bottom: 26px;
+  }
+
+  .hero-slogan em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--terracota);
+  }
+
+  .hero-propuesta {
+    font-size: 17px;
+    color: #4A3F32;
+    font-weight: 400;
+    max-width: 480px;
+    line-height: 1.65;
+    margin-bottom: 34px;
+  }
+
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .hero-img-stack {
+    position: relative;
+    aspect-ratio: 4 / 5;
+  }
+
+  .ph-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: var(--crema-2);
+    border: 1px dashed var(--mid);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--mid);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .ph-img-small {
+    position: absolute;
+    width: 42%;
+    aspect-ratio: 1;
+    bottom: -24px;
+    left: -28px;
+    border: 4px solid var(--crema);
+    box-shadow: 0 8px 24px rgba(43,34,26,0.12);
+  }
+
+  /* ===== INTRO TEXT ===== */
+  .intro {
+    padding: 70px 32px 80px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .intro-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .intro-inner p {
+    font-size: 18px;
+    font-family: var(--serif);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--carbon);
+  }
+
+  .intro-inner p strong {
+    font-weight: 600;
+    color: var(--terracota);
+  }
+
+  /* ===== PILARES / CÓMO TRABAJO ===== */
+  .pilares {
+    padding: 0 32px 90px;
+  }
+
+  .pilares-inner { max-width: 1100px; margin: 0 auto; }
+
+  .pilares-head { margin-bottom: 40px; max-width: 560px; }
+
+  .pilares-titulo {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  .pilares-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+
+  .pilar-card {
+    background: var(--crema);
+    padding: 32px 28px;
+  }
+
+  .pilar-num {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--mid);
+    margin-bottom: 18px;
+  }
+
+  .pilar-nombre {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .pilar-desc {
+    font-size: 14px;
+    color: var(--mid);
+    line-height: 1.6;
+  }
+
+  /* ===== PREVIEW GALERÍA ===== */
+  .preview {
+    padding: 0 32px 90px;
+  }
+
+  .preview-inner { max-width: 1100px; margin: 0 auto; }
+
+  .preview-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 32px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .preview-titulo {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 600;
+  }
+
+  .preview-link {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--terracota);
+    border-bottom: 1.5px solid var(--terracota);
+    padding-bottom: 3px;
+    white-space: nowrap;
+  }
+
+  .preview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  .preview-grid .ph-img { aspect-ratio: 3/4; font-size: 10px; padding: 10px; }
+
+  /* ===== CTA FINAL ===== */
+  .cta-final {
+    background: var(--carbon);
+    color: var(--crema);
+    padding: 80px 32px;
+    text-align: center;
+  }
+
+  .cta-final-inner { max-width: 600px; margin: 0 auto; }
+
+  .cta-final h2 {
+    font-family: var(--serif);
+    font-size: clamp(30px, 5vw, 44px);
+    font-weight: 600;
+    margin-bottom: 18px;
+    line-height: 1.15;
+  }
+
+  .cta-final p {
+    font-size: 15px;
+    color: rgba(251,246,238,0.6);
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .cta-final .btn-primary {
+    background: var(--terracota);
+    border-color: var(--terracota);
+    color: var(--crema);
+  }
+
+  .cta-final .btn-primary:hover { opacity: 0.85; }
+
+  @media (max-width: 880px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero-img-stack { max-width: 420px; margin: 0 auto; order: -1; }
+    .pilares-grid { grid-template-columns: 1fr; }
+    .preview-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 560px) {
+    .hero { padding: 64px 20px 56px; }
+    .intro { padding: 50px 20px 56px; }
+    .pilares, .preview { padding: 0 20px 64px; }
+    .ph-img-small { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">contenido<span>visual</span>.ok</a>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="gastronomia.html">Gastronomía</a></li>
+      <li><a href="producto.html">Producto</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1 class="hero-slogan">Contenido<br>gastronómico<br><em>estratégico</em></h1>
+      <p class="hero-propuesta">Ayudo a restaurantes y locales gastronómicos independientes de Córdoba a que su comida se vea tan bien como sabe, a través de fotografía estratégica, pensada para vender, no solo para verse linda.</p>
+      <div class="hero-ctas">
+        <a href="gastronomia.html" class="btn btn-primary">Ver trabajos</a>
+        <a href="contacto.html" class="btn btn-outline">Hablemos de tu local</a>
+      </div>
+    </div>
+    <div class="hero-img-stack">
+      <!-- REEMPLAZAR: imagen principal del hero, formato vertical 4:5 -->
+      <!-- Sugerencia: un plato bien iluminado, tu mejor foto gastronómica -->
+      <div class="ph-img">
+        <span>📷</span>
+        <span>Imagen principal<br>formato 4:5 vertical</span>
+      </div>
+      <!-- REEMPLAZAR: imagen secundaria pequeña, detalle o BTS -->
+      <img class="ph-img ph-img-small" src="" alt="Detalle de sesión fotográfica" onerror="this.style.display='none'">
+    </div>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="intro-inner">
+    <p>La mayoría de los locales con buen producto pierden clientes antes de que entren por la puerta, porque la foto que ven en redes no representa lo que realmente sirven. <strong>Mi trabajo es cerrar esa distancia</strong>: que la imagen genere las mismas ganas que genera la mesa servida.</p>
+  </div>
+</section>
+
+<section class="pilares">
+  <div class="pilares-inner">
+    <div class="pilares-head">
+      <h2 class="pilares-titulo">Cómo trabajo</h2>
+    </div>
+    <div class="pilares-grid">
+      <div class="pilar-card">
+        <div class="pilar-num">Enfoque</div>
+        <div class="pilar-nombre">Resultado, no solo estética</div>
+        <div class="pilar-desc">Cada foto se piensa para generar una acción: que alguien quiera reservar, pedir o volver. No para verse linda en abstracto.</div>
+      </div>
+      <div class="pilar-card">
+        <div class="pilar-num">Proceso</div>
+        <div class="pilar-nombre">Adaptado a tu local</div>
+        <div class="pilar-desc">Trabajo en locación, con la luz y el contexto real del lugar. El plato se fotografía como se vive ahí, no en un estudio genérico.</div>
+      </div>
+      <div class="pilar-card">
+        <div class="pilar-num">Entrega</div>
+        <div class="pilar-nombre">Listo para usar</div>
+        <div class="pilar-desc">Las fotos llegan editadas y en el formato que necesitás para redes, carta digital o lo que tu local use para mostrarse.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="preview">
+  <div class="preview-inner">
+    <div class="preview-head">
+      <h2 class="preview-titulo">Trabajos recientes</h2>
+      <a href="gastronomia.html" class="preview-link">Ver todo el trabajo en gastronomía →</a>
+    </div>
+    <div class="preview-grid">
+      <!-- REEMPLAZAR: 4 fotos destacadas. Mismo tamaño, formato vertical 3:4 -->
+      <div class="ph-img"><span>📷</span><span>Foto 1</span></div>
+      <div class="ph-img"><span>📷</span><span>Foto 2</span></div>
+      <div class="ph-img"><span>📷</span><span>Foto 3</span></div>
+      <div class="ph-img"><span>📷</span><span>Foto 4</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="cta-final-inner">
+    <h2>¿Tu local merece verse como lo que es?</h2>
+    <p>Contame sobre tu negocio y armamos juntos una sesión que muestre tu comida como realmente se merece.</p>
+    <a href="contacto.html" class="btn btn-primary">Escribime</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-text">contenidovisual.ok · Córdoba, Argentina</span>
+    <ul class="footer-links">
+      <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

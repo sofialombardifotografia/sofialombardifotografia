@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto · contenidovisual.ok</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+
+  .contacto-section {
+    padding: 80px 32px 100px;
+  }
+
+  .contacto-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .contacto-titulo {
+    font-family: var(--serif);
+    font-size: clamp(34px, 5vw, 48px);
+    font-weight: 600;
+    line-height: 1.08;
+    margin-bottom: 20px;
+  }
+
+  .contacto-desc {
+    font-size: 15px;
+    color: var(--mid);
+    line-height: 1.7;
+    margin-bottom: 36px;
+    max-width: 420px;
+  }
+
+  .contacto-canales {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .canal {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    background: var(--crema-2);
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .canal:hover { background: #EFE3CC; }
+
+  .canal-icon { font-size: 20px; }
+
+  .canal-label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid);
+    font-weight: 600;
+  }
+
+  .canal-valor {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /* FORM */
+  .form-box {
+    background: var(--crema-2);
+    border-radius: 6px;
+    padding: 36px 32px;
+  }
+
+  .form-group { margin-bottom: 20px; }
+
+  .form-group label {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--carbon);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: var(--crema);
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--carbon);
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--terracota);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 110px; }
+
+  .form-nota {
+    font-size: 12px;
+    color: var(--mid);
+    margin-top: 16px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 880px) {
+    .contacto-inner { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  @media (max-width: 560px) {
+    .contacto-section { padding: 56px 20px 70px; }
+    .form-box { padding: 28px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">contenido<span>visual</span>.ok</a>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="gastronomia.html">Gastronomía</a></li>
+      <li><a href="producto.html">Producto</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="contacto-section">
+  <div class="contacto-inner">
+
+    <div>
+      <div class="eyebrow">Contacto</div>
+      <h1 class="contacto-titulo">Contame sobre tu local</h1>
+      <p class="contacto-desc">Mientras más contexto me das, mejor puedo pensar la sesión que tu negocio necesita. Respondo en menos de 24 horas.</p>
+
+      <div class="contacto-canales">
+        <a href="https://wa.me/5490000000000" target="_blank" rel="noopener" class="canal">
+          <span class="canal-icon">💬</span>
+          <div>
+            <div class="canal-label">WhatsApp</div>
+            <!-- REEMPLAZAR: tu número real -->
+            <div class="canal-valor">+54 9 351 000-0000</div>
+          </div>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="canal">
+          <span class="canal-icon">📷</span>
+          <div>
+            <div class="canal-label">Instagram</div>
+            <!-- REEMPLAZAR: tu usuario real -->
+            <div class="canal-valor">@contenidovisual.ok</div>
+          </div>
+        </a>
+        <a href="mailto:hola@contenidovisual.ok" class="canal">
+          <span class="canal-icon">✉️</span>
+          <div>
+            <div class="canal-label">Email</div>
+            <!-- REEMPLAZAR: tu email real -->
+            <div class="canal-valor">hola@contenidovisual.ok</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <!--
+        NOTA: este formulario es visual. Para que funcione y te lleguen
+        los mensajes por email, necesitás conectarlo a un servicio
+        gratuito como Formspree o Web3Forms (ambos tienen plan free
+        y se integran copiando una sola línea en el atributo "action").
+        Mientras tanto, los botones de WhatsApp e Instagram de al lado
+        ya funcionan directamente.
+      -->
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="nombre">Tu nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="local">Nombre de tu local</label>
+          <input type="text" id="local" name="local">
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Contame qué necesitás</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Tipo de local, qué te gustaría mostrar, si tenés alguna fecha en mente..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Enviar mensaje</button>
+        <p class="form-nota">También podés escribirme directo por WhatsApp o Instagram si preferís una respuesta más rápida.</p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-text">contenidovisual.ok · Córdoba, Argentina</span>
+    <ul class="footer-links">
+      <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
