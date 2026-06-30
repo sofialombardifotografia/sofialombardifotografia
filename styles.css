@@ -7,17 +7,17 @@
 
 :root {
   /* Paleta cálida */
-  --crema: #FBF6EE;       /* fondo principal */
-  --crema-2: #F4EBD9;     /* fondo secundario / cards */
+  --gris: #faf7f8;       /* fondo principal */
+  --blanco: #ffffff;     /* fondo secundario / cards */
   --carbon: #2B221A;      /* texto principal, casi negro cálido */
-  --terracota: #C1622D;   /* acento principal — tomate asado */
-  --oliva: #6B7A4F;       /* acento secundario — verde oliva */
-  --mostaza: #D9A441;     /* acento terciario — usar con moderación */
+  --naranja: ##ff957d;   /* acento principal — tomate asado */
+  --rosa: ##eeb8d7;       /* acento secundario — verde oliva */
+  --lila: ##f6bfff;     /* acento terciario — usar con moderación */
   --mid: #8C7E6A;         /* texto secundario, gris cálido */
   --rule: #E4D8C2;        /* líneas divisorias */
 
-  --serif: 'Fraunces', serif;
-  --sans: 'Inter', sans-serif;
+  --serif: 'Montserrat', Mediano 500 cursiva;
+  --sans: 'Montserrat', Regular 400;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
