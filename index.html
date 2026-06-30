@@ -26,7 +26,6 @@
   .hero-slogan {
     font-family: var(--serif);
     font-size: clamp(40px, 6vw, 64px);
-    font-weight: 600;
     line-height: 1.04;
     letter-spacing: -0.01em;
     margin-bottom: 26px;
@@ -35,13 +34,15 @@
   .hero-slogan em {
     font-style: italic;
     font-weight: 400;
-    color: var(--terracota);
+    color: var(--carbon);
   }
-.hero-slogan strong em {
-  font-style: italic;
-  font-weight: 700;
-  color: var(--naranja);
-}
+
+  .hero-slogan strong em {
+    font-style: italic;
+    font-weight: 700;
+    color: var(--naranja);
+  }
+
   .hero-propuesta {
     font-size: 17px;
     color: #4A3F32;
@@ -56,18 +57,21 @@
   .hero-img-stack {
     position: relative;
     aspect-ratio: 3 / 4;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  border-radius: 4px;
-}
+  }
+
+  .hero-img-stack img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 4px;
+  }
 
   .ph-img {
     width: 100%;
     height: 100%;
     border-radius: 4px;
-    background: var(--crema-2);
+    background: #F0E8DC;
     border: 1px dashed var(--mid);
     display: flex;
     flex-direction: column;
@@ -88,38 +92,13 @@
     aspect-ratio: 1;
     bottom: -24px;
     left: -28px;
-    border: 4px solid var(--crema);
+    border: 4px solid var(--gris);
     box-shadow: 0 8px 24px rgba(43,34,26,0.12);
- .checklist-proceso {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  max-width: 560px;
-}
+    object-fit: cover;
+    border-radius: 4px;
+  }
 
-.checklist-proceso li {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--rule);
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--carbon);
-}
-
-.checklist-proceso li:last-child { border-bottom: none; }
-
-.checklist-proceso li span {
-  color: var(--naranja);
-  font-size: 18px;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-
-  /* ===== INTRO TEXT ===== */
+  /* ===== INTRO ===== */
   .intro {
     padding: 70px 32px 80px;
     border-top: 1px solid var(--rule);
@@ -141,10 +120,10 @@
 
   .intro-inner p strong {
     font-weight: 600;
-    color: var(--terracota);
+    color: var(--naranja);
   }
 
-  /* ===== PILARES / CÓMO TRABAJO ===== */
+  /* ===== PROCESO / CHECKLIST ===== */
   .pilares {
     padding: 0 32px 90px;
   }
@@ -160,37 +139,34 @@
     line-height: 1.1;
   }
 
-  .pilares-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--rule);
-    border: 1px solid var(--rule);
+  .checklist-proceso {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 560px;
   }
 
-  .pilar-card {
-    background: var(--crema);
-    padding: 32px 28px;
+  .checklist-proceso li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--carbon);
   }
 
-  .pilar-num {
-    font-family: var(--serif);
-    font-size: 14px;
-    color: var(--mid);
-    margin-bottom: 18px;
-  }
+  .checklist-proceso li:last-child { border-bottom: none; }
 
-  .pilar-nombre {
-    font-family: var(--serif);
-    font-size: 21px;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-
-  .pilar-desc {
-    font-size: 14px;
-    color: var(--mid);
-    line-height: 1.6;
+  .checklist-proceso li span {
+    color: var(--naranja);
+    font-size: 20px;
+    font-weight: 700;
+    flex-shrink: 0;
+    line-height: 1;
   }
 
   /* ===== PREVIEW GALERÍA ===== */
@@ -215,13 +191,19 @@
     font-weight: 600;
   }
 
+  .preview-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
   .preview-link {
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--terracota);
-    border-bottom: 1.5px solid var(--terracota);
+    color: var(--naranja);
+    border-bottom: 1.5px solid var(--naranja);
     padding-bottom: 3px;
     white-space: nowrap;
   }
@@ -234,43 +216,16 @@
 
   .preview-grid .ph-img { aspect-ratio: 3/4; font-size: 10px; padding: 10px; }
 
-  /* ===== CTA FINAL ===== */
-  .cta-final {
-    background: var(--carbon);
-    color: var(--crema);
-    padding: 80px 32px;
-    text-align: center;
+  .preview-grid img {
+    aspect-ratio: 3/4;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
   }
-
-  .cta-final-inner { max-width: 600px; margin: 0 auto; }
-
-  .cta-final h2 {
-    font-family: var(--serif);
-    font-size: clamp(30px, 5vw, 44px);
-    font-weight: 600;
-    margin-bottom: 18px;
-    line-height: 1.15;
-  }
-
-  .cta-final p {
-    font-size: 15px;
-    color: rgba(251,246,238,0.6);
-    margin-bottom: 32px;
-    line-height: 1.6;
-  }
-
-  .cta-final .btn-primary {
-    background: var(--terracota);
-    border-color: var(--terracota);
-    color: var(--crema);
-  }
-
-  .cta-final .btn-primary:hover { opacity: 0.85; }
 
   @media (max-width: 880px) {
     .hero-inner { grid-template-columns: 1fr; gap: 40px; }
     .hero-img-stack { max-width: 420px; margin: 0 auto; order: -1; }
-    .pilares-grid { grid-template-columns: 1fr; }
     .preview-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
@@ -303,15 +258,19 @@
   <div class="hero-inner">
     <div>
       <h1 class="hero-slogan"><em>Contenido<br>gastronómico</em><br><strong><em>estratégico</em></strong></h1>
-      <p class="hero-propuesta">Ayudo a restaurantes, locales gastronómicos y marcas de Córdoba a que su comida y productos se vean con todo su potencial, a través de fotografía estratégica, pensada para vender, no solo para verse linda.</p>
+      <p class="hero-propuesta">Ayudo a restaurantes y locales gastronómicos independientes de Córdoba a que su comida se vea tan bien como sabe, a través de fotografía estratégica, pensada para vender, no solo para verse linda.</p>
       <div class="hero-ctas">
         <a href="gastronomia.html" class="btn btn-primary">Ver trabajos</a>
         <a href="contacto.html" class="btn btn-outline">Hablemos de tu local</a>
       </div>
     </div>
     <div class="hero-img-stack">
-   <img class="ph-img" src="_DSC6488.jpg" alt="Fotografía gastronómica">
-      <img class="ph-img ph-img-small" src="" alt="Detalle de sesión fotográfica" onerror="this.style.display='none'">
+      <!-- REEMPLAZAR: imagen principal del hero, formato vertical 3:4 -->
+      <!-- Ejemplo: <img src="hero.jpg" alt="Fotografía gastronómica"> -->
+      <div class="ph-img">
+        <span>📷</span>
+        <span>Imagen principal<br>formato 3:4 vertical</span>
+      </div>
     </div>
   </div>
 </header>
@@ -327,26 +286,14 @@
     <div class="pilares-head">
       <h2 class="pilares-titulo">Cómo trabajo</h2>
     </div>
-    <div class="pilares-grid">
-      <ul class="checklist-proceso">
-  <li><span>✓</span> Analizo tu marca</li>
-  <li><span>✓</span> Planteo objetivos</li>
-  <li><span>✓</span> Defino el tipo de contenido</li>
-  <li><span>✓</span> Organizo la idea, el estilo y cómo comunicar</li>
-  <li><span>✓</span> Empiezo con la creación</li>
-  <li><span>✓</span> Entrego el material listo para cumplir tus objetivos</li>
-</ul>
-      <div class="pilar-card">
-        <div class="pilar-num">Proceso</div>
-        <div class="pilar-nombre">Adaptado a tu local</div>
-        <div class="pilar-desc">Trabajo en locación, con la luz y el contexto real del lugar. El plato se fotografía como se vive ahí, no en un estudio genérico.</div>
-      </div>
-      <div class="pilar-card">
-        <div class="pilar-num">Entrega</div>
-        <div class="pilar-nombre">Listo para usar</div>
-        <div class="pilar-desc">Las fotos llegan editadas y en el formato que necesitás para redes, carta digital o lo que tu local use para mostrarse.</div>
-      </div>
-    </div>
+    <ul class="checklist-proceso">
+      <li><span>✓</span> Analizo tu marca</li>
+      <li><span>✓</span> Planteo objetivos</li>
+      <li><span>✓</span> Defino el tipo de contenido</li>
+      <li><span>✓</span> Organizo la idea, el estilo y cómo comunicar</li>
+      <li><span>✓</span> Empiezo con la creación</li>
+      <li><span>✓</span> Entrego el material listo para cumplir tus objetivos</li>
+    </ul>
   </div>
 </section>
 
@@ -354,17 +301,23 @@
   <div class="preview-inner">
     <div class="preview-head">
       <h2 class="preview-titulo">Trabajos recientes</h2>
-      <div style="display:flex; gap:20px; flex-wrap:wrap;">
-  <a href="gastronomia.html" class="preview-link">Ver gastronomía →</a>
-  <a href="producto.html" class="preview-link">Ver producto →</a>
-</div>
+      <div class="preview-links">
+        <a href="gastronomia.html" class="preview-link">Ver gastronomía →</a>
+        <a href="producto.html" class="preview-link">Ver producto →</a>
+      </div>
     </div>
     <div class="preview-grid">
-      <!-- REEMPLAZAR: 4 fotos destacadas. Mismo tamaño, formato vertical 3:4 -->
-      <img class="ph-img" src="_DSC6583.jpg" alt="Fotografía gastronómica">
-      <img class="ph-img" src="_DSC6667.jpg" alt="Fotografía gastronómica">
-     <img class="ph-img" src="_DSC4654 (1) (1).jpg" alt="Fotografía gastronómica">
-     <img class="ph-img" src="_DSC2934.jpg" alt="Fotografía gastronómica">
+      <!-- REEMPLAZAR: 4 fotos destacadas, formato vertical 3:4 -->
+      <!-- Ejemplo: <img src="preview1.jpg" alt="Fotografía gastronómica"> -->
+      <div class="ph-img"><span>📷</span><span>Foto 1</span></div>
+      <div class="ph-img"><span>📷</span><span>Foto 2</span></div>
+      <div class="ph-img"><span>📷</span><span>Foto 3</span></div>
+      <div class="ph-img"><span>📷</span><span>Foto 4</span></div>
+       <!-- Ejemplo: <img src="preview1.jpg" alt="Fotografía producto"> -->
+      <div class="ph-img"><span>📷</span><span>Foto 1</span></div>
+      <div class="ph-img"><span>📷</span><span>Foto 2</span></div>
+      <div class="ph-img"><span>📷</span><span>Foto 3</span></div>
+      <div class="ph-img"><span>📷</span><span>Foto 4</span></div>
     </div>
   </div>
 </section>
@@ -373,8 +326,9 @@
   <div class="footer-inner">
     <span class="footer-text">contenidovisual.ok · Córdoba, Argentina</span>
     <ul class="footer-links">
-      <li><a href="https://instagram.com/contenidovisual.ok" target="_blank" rel="noopener">Instagram</a></li>
-      <li><a href="https://www.tiktok.com/@contenidovisual.ok" target="_blank" rel="noopener">TikTok</a></li>
+      <!-- REEMPLAZAR: poné tu link real de Instagram y TikTok -->
+      <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></li>
     </ul>
   </div>
 </footer>
