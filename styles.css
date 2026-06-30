@@ -1,23 +1,21 @@
 /* =========================================================
    contenidovisual.ok — Portfolio gastronómico
-   Paleta: cálida, clara, apetitosa
    ========================================================= */
 
-@import url('https://fonts.google.com/specimen/Montserrat?query=montserrat,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 
 :root {
-  /* Paleta cálida */
-  --gris: #faf7f8;       /* fondo principal */
-  --blanco: #ffffff;     /* fondo secundario / cards */
-  --carbon: #2B221A;      /* texto principal, casi negro cálido */
-  --naranja: ##ff957d;   /* acento principal — naranja */
-  --rosa: ##eeb8d7;       /* acento secundario — rosa */
-  --lila: ##f6bfff;     /* acento terciario — usar con moderación */
-  --mid: #8C7E6A;         /* texto secundario, gris cálido */
-  --rule: #E4D8C2;        /* líneas divisorias */
+  --gris: #faf7f8;
+  --blanco: #ffffff;
+  --carbon: #2B221A;
+  --naranja: #ff957d;
+  --rosa: #eeb8d7;
+  --lila: #f6bfff;
+  --mid: #8C7E6A;
+  --rule: #E4D8C2;
 
-  --serif: 'Montserrat', Mediano 500 cursiva;
-  --sans: 'Montserrat', Regular 400;
+  --serif: 'Montserrat', sans-serif;
+  --sans: 'Montserrat', sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -42,7 +40,7 @@ img { max-width: 100%; display: block; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(251, 246, 238, 0.92);
+  background: rgba(250, 247, 248, 0.92);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--rule);
 }
@@ -183,7 +181,7 @@ img { max-width: 100%; display: block; }
 
 .btn-primary:hover {
   background: var(--naranja);
-  border-color: var(--narajna);
+  border-color: var(--naranja);
 }
 
 .btn-outline {
@@ -194,6 +192,18 @@ img { max-width: 100%; display: block; }
 .btn-outline:hover {
   background: var(--carbon);
   color: var(--gris);
+}
+
+/* ===== TITULOS EN ITALIC CON MONTSERRAT ===== */
+/* Montserrat no tiene serif, así que para los títulos
+   usamos italic + weight 500 para diferenciarlos del cuerpo */
+.hero-slogan em,
+.caso-titulo em,
+.lec-title em,
+.cover-title em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--naranja);
 }
 
 /* ===== RESPONSIVE NAV ===== */
