@@ -37,7 +37,11 @@
     font-weight: 400;
     color: var(--terracota);
   }
-
+.hero-slogan strong em {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--naranja);
+}
   .hero-propuesta {
     font-size: 17px;
     color: #4A3F32;
@@ -86,7 +90,34 @@
     left: -28px;
     border: 4px solid var(--crema);
     box-shadow: 0 8px 24px rgba(43,34,26,0.12);
-  }
+ .checklist-proceso {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 560px;
+}
+
+.checklist-proceso li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--carbon);
+}
+
+.checklist-proceso li:last-child { border-bottom: none; }
+
+.checklist-proceso li span {
+  color: var(--naranja);
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
 
   /* ===== INTRO TEXT ===== */
   .intro {
@@ -97,7 +128,7 @@
   .intro-inner {
     max-width: 700px;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
   }
 
   .intro-inner p {
@@ -271,7 +302,7 @@
 <header class="hero">
   <div class="hero-inner">
     <div>
-      <h1 class="hero-slogan">Contenido<br>gastronómico<br><em>estratégico</em></h1>
+      <h1 class="hero-slogan"><em>Contenido<br>gastronómico</em><br><strong><em>estratégico</em></strong></h1>
       <p class="hero-propuesta">Ayudo a restaurantes, locales gastronómicos y marcas de Córdoba a que su comida y productos se vean con todo su potencial, a través de fotografía estratégica, pensada para vender, no solo para verse linda.</p>
       <div class="hero-ctas">
         <a href="gastronomia.html" class="btn btn-primary">Ver trabajos</a>
@@ -297,11 +328,14 @@
       <h2 class="pilares-titulo">Cómo trabajo</h2>
     </div>
     <div class="pilares-grid">
-      <div class="pilar-card">
-        <div class="pilar-num">Enfoque</div>
-        <div class="pilar-nombre">Resultado, no solo estética</div>
-        <div class="pilar-desc">Cada foto se piensa para generar una acción: que alguien quiera reservar, pedir o volver. No para verse linda en abstracto.</div>
-      </div>
+      <ul class="checklist-proceso">
+  <li><span>✓</span> Analizo tu marca</li>
+  <li><span>✓</span> Planteo objetivos</li>
+  <li><span>✓</span> Defino el tipo de contenido</li>
+  <li><span>✓</span> Organizo la idea, el estilo y cómo comunicar</li>
+  <li><span>✓</span> Empiezo con la creación</li>
+  <li><span>✓</span> Entrego el material listo para cumplir tus objetivos</li>
+</ul>
       <div class="pilar-card">
         <div class="pilar-num">Proceso</div>
         <div class="pilar-nombre">Adaptado a tu local</div>
@@ -320,7 +354,10 @@
   <div class="preview-inner">
     <div class="preview-head">
       <h2 class="preview-titulo">Trabajos recientes</h2>
-      <a href="gastronomia.html" class="preview-link">Ver todo el trabajo en gastronomía →</a>
+      <div style="display:flex; gap:20px; flex-wrap:wrap;">
+  <a href="gastronomia.html" class="preview-link">Ver gastronomía →</a>
+  <a href="producto.html" class="preview-link">Ver producto →</a>
+</div>
     </div>
     <div class="preview-grid">
       <!-- REEMPLAZAR: 4 fotos destacadas. Mismo tamaño, formato vertical 3:4 -->
@@ -329,14 +366,6 @@
      <img class="ph-img" src="_DSC4654 (1) (1).jpg" alt="Fotografía gastronómica">
      <img class="ph-img" src="_DSC2934.jpg" alt="Fotografía gastronómica">
     </div>
-  </div>
-</section>
-
-<section class="cta-final">
-  <div class="cta-final-inner">
-    <h2>Tu local merece verse como lo que es</h2>
-    <p>Contame sobre tu negocio y armamos juntos una sesión que muestre tu comida como realmente se merece.</p>
-    <a href="contacto.html" class="btn btn-primary">Escribime</a>
   </div>
 </section>
 
