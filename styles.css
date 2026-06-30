@@ -3,15 +3,15 @@
    Paleta: cálida, clara, apetitosa
    ========================================================= */
 
-@import url('https://fonts.google.com/specimen/Montserrat?query=montserrat,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.google.com/specimen/Montserrat?query=montserrat,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600);
 
 :root {
   /* Paleta cálida */
   --gris: #faf7f8;       /* fondo principal */
   --blanco: #ffffff;     /* fondo secundario / cards */
   --carbon: #2B221A;      /* texto principal, casi negro cálido */
-  --naranja: ##ff957d;   /* acento principal — tomate asado */
-  --rosa: ##eeb8d7;       /* acento secundario — verde oliva */
+  --naranja: ##ff957d;   /* acento principal — naranja */
+  --rosa: ##eeb8d7;       /* acento secundario — rosa */
   --lila: ##f6bfff;     /* acento terciario — usar con moderación */
   --mid: #8C7E6A;         /* texto secundario, gris cálido */
   --rule: #E4D8C2;        /* líneas divisorias */
@@ -25,7 +25,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--crema);
+  background: var(--gris);
   color: var(--carbon);
   font-family: var(--sans);
   font-size: 16px;
@@ -63,7 +63,7 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.01em;
 }
 
-.nav-brand span { color: var(--terracota); }
+.nav-brand span { color: var(--naranja); }
 
 .nav-links {
   display: flex;
@@ -85,7 +85,7 @@ img { max-width: 100%; display: block; }
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--carbon);
-  border-bottom-color: var(--terracota);
+  border-bottom-color: var(--naranja);
 }
 
 .nav-toggle {
@@ -142,7 +142,7 @@ img { max-width: 100%; display: block; }
   transition: color 0.2s;
 }
 
-.footer-links a:hover { color: var(--terracota); }
+.footer-links a:hover { color: var(--naranja); }
 
 /* ===== UTILIDADES ===== */
 .container {
@@ -155,7 +155,7 @@ img { max-width: 100%; display: block; }
   font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--terracota);
+  color: var(--naranja);
   font-weight: 600;
   margin-bottom: 14px;
 }
@@ -178,12 +178,12 @@ img { max-width: 100%; display: block; }
 
 .btn-primary {
   background: var(--carbon);
-  color: var(--crema);
+  color: var(--gris);
 }
 
 .btn-primary:hover {
-  background: var(--terracota);
-  border-color: var(--terracota);
+  background: var(--naranja);
+  border-color: var(--narajna);
 }
 
 .btn-outline {
@@ -193,7 +193,7 @@ img { max-width: 100%; display: block; }
 
 .btn-outline:hover {
   background: var(--carbon);
-  color: var(--crema);
+  color: var(--gris);
 }
 
 /* ===== RESPONSIVE NAV ===== */
@@ -205,7 +205,7 @@ img { max-width: 100%; display: block; }
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--crema);
+    background: var(--gris);
     flex-direction: column;
     gap: 0;
     border-bottom: 1px solid var(--rule);
