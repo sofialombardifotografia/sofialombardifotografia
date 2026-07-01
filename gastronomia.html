@@ -5,14 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gastronomía · contenidovisual.ok</title>
 <link rel="stylesheet" href="styles.css">
-<style>
 
+<style>
   .page-head {
     padding: 64px 32px 50px;
     border-bottom: 1px solid var(--rule);
   }
 
-  .page-head-inner { max-width: 1100px; margin: 0 auto; }
+  .page-head-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
   .page-titulo {
     font-family: var(--serif);
@@ -29,103 +32,13 @@
     line-height: 1.7;
   }
 
-  /* ===== CASOS ===== */
-  .casos {
-    padding: 70px 32px;
-  }
-
-  .casos-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 110px; }
-
-  .caso {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 50px;
-    align-items: center;
-  }
-
-  .caso:nth-child(even) { direction: rtl; }
-  .caso:nth-child(even) .caso-texto { direction: ltr; }
-  .caso:nth-child(even) .caso-imgs { direction: ltr; }
-
-  .caso-imgs {
-    position: relative;
-    aspect-ratio: 3/4;
-  }
-
-  .caso-imgs .ph-img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .caso-imgs .ph-img-detail {
-    position: absolute;
-    width: 46%;
-    aspect-ratio: 1;
-    bottom: -22px;
-    right: -26px;
-    border: 4px solid var(--crema);
-    box-shadow: 0 10px 28px rgba(43,34,26,0.14);
-  }
-
-  .caso-eyebrow {
-    font-size: 12px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--terracota);
-    font-weight: 600;
-    margin-bottom: 14px;
-  }
-
-  .caso-titulo {
-    font-family: var(--serif);
-    font-size: clamp(24px, 3.5vw, 32px);
-    font-weight: 600;
-    margin-bottom: 16px;
-    line-height: 1.2;
-  }
-
-  .caso-texto p {
-    font-size: 14.5px;
-    color: #4A3F32;
-    line-height: 1.75;
-    margin-bottom: 14px;
-  }
-
-  .caso-texto p:last-child { margin-bottom: 0; }
-
-  .caso-tag {
-    display: inline-block;
-    font-size: 11px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--oliva);
-    background: rgba(107,122,79,0.1);
-    padding: 4px 10px;
-    border-radius: 100px;
-    margin-top: 16px;
-  }
-
-  /* ===== GALERÍA SUELTA ===== */
   .galeria-suelta {
-    padding: 30px 32px 90px;
-    border-top: 1px solid var(--rule);
+    padding: 70px 32px 90px;
   }
 
-  .gs-inner { max-width: 1100px; margin: 60px auto 0; }
-
-  .gs-titulo {
-    font-family: var(--serif);
-    font-size: clamp(26px, 4vw, 34px);
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-
-  .gs-desc {
-    font-size: 14px;
-    color: var(--mid);
-    margin-bottom: 32px;
-    max-width: 480px;
+  .gs-inner {
+    max-width: 1100px;
+    margin: 0 auto;
   }
 
   .gs-grid {
@@ -134,31 +47,39 @@
     gap: 14px;
   }
 
-  .gs-grid .ph-img { aspect-ratio: 3/4; 
-  object-fit: cover}
-
-  @media (max-width: 880px) {
-    .caso, .caso:nth-child(even) { grid-template-columns: 1fr; direction: ltr; gap: 28px; }
-    .caso-imgs { max-width: 420px; margin: 0 auto; }
+  .gs-grid .ph-img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
   }
 
   @media (max-width: 560px) {
-    .page-head { padding: 48px 20px 40px; }
-    .casos { padding: 50px 20px; gap: 80px; }
-    .galeria-suelta { padding: 0 20px 64px; }
-    .gs-grid { grid-template-columns: repeat(2, 1fr); }
-    .caso-imgs .ph-img-detail { width: 40%; right: -14px; bottom: -16px; }
+    .page-head {
+      padding: 48px 20px 40px;
+    }
+
+    .galeria-suelta {
+      padding: 40px 20px 64px;
+    }
+
+    .gs-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 </style>
 </head>
+
 <body>
 
 <nav class="site-nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">contenido<span>visual</span>.ok</a>
+
     <button class="nav-toggle" aria-label="Abrir menú">
       <span></span><span></span><span></span>
     </button>
+
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="gastronomia.html" class="active">Gastronomía</a></li>
@@ -172,81 +93,42 @@
   <div class="page-head-inner">
     <div class="eyebrow">Portfolio</div>
     <h1 class="page-titulo">Gastronomía</h1>
-    <p class="page-desc">Fotografía pensada para restaurantes y locales con identidad propia. Cada sesión se piensa en función de lo que ese plato necesita comunicar para vender, no solo para verse bien.</p>
+    <p class="page-desc">
+      Fotografía pensada para restaurantes y locales con identidad propia.
+    </p>
   </div>
 </header>
 
-<!--
-  ============================================================
-  ESTRUCTURA DE CADA CASO — copiá este bloque .caso para
-  agregar un trabajo nuevo. Reemplazá:
-  1. La imagen principal (.ph-img) y la de detalle (.ph-img-detail)
-  2. El eyebrow (nombre del local o "Proyecto conceptual")
-  3. El título (qué se buscaba lograr)
-  4. El texto: contexto + decisión + resultado
-  ============================================================
--->
-
-<section class="casos">
-  <div class="casos-inner">
-
-    <!-- CASO 1 -->
-    <article class="caso">
-      <div class="caso-imgs">
-        <!-- REEMPLAZAR: foto principal del caso, vertical 3:4 -->
-        <div class="ph-img"><span>📷</span><span>Foto principal<br>del caso 1</span></div>
-        <!-- REEMPLAZAR: foto de detalle o BTS -->
-       <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/WhatsApp Image 2026-06-30 at 21.36.29.jpg" alt="Fotografía gastronómica">
-      </div>
-      <div class="caso-texto">
-        <div class="caso-eyebrow"><!-- Nombre del local o "Proyecto conceptual" --> Proyecto conceptual</div>
-        <h2 class="caso-titulo"><!-- Qué se buscaba lograr con esta sesión -->Que el plato se vea como en la mesa, no como en un estudio</h2>
-        <p><!-- Contexto: qué pedía o necesitaba este caso -->El desafío era fotografiar un plato con mucho color y textura sin que la foto se viera "cargada" o confusa. La luz natural del local era buena pero cambiante a lo largo del día.</p>
-        <p><!-- Decisión: qué hiciste y por qué -->Se trabajó con luz natural de costado, eligiendo el horario donde la luz entraba más pareja. El ángulo se decidió en función de mostrar la textura, no solo el conjunto del plato.</p>
-        <span class="caso-tag">Luz natural · Locación</span>
-      </div>
-    </article>
-
-    <!-- CASO 2 -->
-    <article class="caso">
-      <div class="caso-imgs">
-        <div class="ph-img"><span>📷</span><span>Foto principal<br>del caso 2</span></div>
-        <img class="ph-img ph-img-detail" src="" alt="Detalle" onerror="this.style.display='none'">
-      </div>
-      <div class="caso-texto">
-        <div class="caso-eyebrow">Proyecto conceptual</div>
-        <h2 class="caso-titulo">Mostrar el proceso para generar confianza</h2>
-        <p>En locales con identidad fuerte, mostrar cómo se prepara el plato genera tanta conexión como el resultado final. La idea fue capturar un momento del proceso que comunicara cuidado, no solo técnica.</p>
-        <p>Se priorizó un encuadre cercano que mostrara manos trabajando, con el plato terminado como referencia visual al costado.</p>
-        <span class="caso-tag">Proceso · Detrás de escena</span>
-      </div>
-    </article>
-
-  </div>
-</section>
-
 <section class="galeria-suelta">
   <div class="gs-inner">
-    <h2 class="gs-titulo">Más trabajos</h2>
-    <p class="gs-desc">Selección de tomas individuales: detalles, texturas y composiciones de distintos proyectos.</p>
+
     <div class="gs-grid">
-      <!-- REEMPLAZAR: agregar tantas fotos sueltas como necesites, mismo formato cuadrado -->
       <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC1966.jpg" alt="Fotografía gastronómica">
+
       <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC5205.jpg" alt="Fotografía gastronómica">
+
       <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC0966.jpg" alt="Fotografía gastronómica">
+
       <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC8376.jpg" alt="Fotografía gastronómica">
+
       <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC6575.jpg" alt="Fotografía gastronómica">
+
       <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC5205.jpg" alt="Fotografía gastronómica">
+
       <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC8334.jpg" alt="Fotografía gastronómica">
+
       <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC1966.jpg" alt="Fotografía gastronómica">
+
       <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC0945.jpg" alt="Fotografía gastronómica">
     </div>
+
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="footer-inner">
     <span class="footer-text">contenidovisual.ok · Córdoba, Argentina</span>
+
     <ul class="footer-links">
       <li><a href="https://www.instagram.com/contenidovisual.ok/" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.tiktok.com/@contenidovisual.ok" target="_blank" rel="noopener">TikTok</a></li>
@@ -256,5 +138,6 @@
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
