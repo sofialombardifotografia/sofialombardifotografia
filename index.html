@@ -125,7 +125,32 @@
     padding: 0 32px 90px;
   }
 
-  .pilares-inner { max-width: 1100px; margin: 0 auto; }
+ .pilares-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.pilares-img img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media (max-width: 880px) {
+  .pilares-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .pilares-img {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
 
   .pilares-head { margin-bottom: 40px; max-width: 560px; }
 
@@ -270,22 +295,28 @@
 <section class="intro">
   <div class="intro-inner">
     <p>La mayoría de los locales con buen producto pierden clientes antes de que entren por la puerta, porque la foto que ven en redes no representa lo que realmente sirven. <strong>Mi trabajo es cerrar esa distancia</strong>: que la imagen genere las mismas ganas que genera la mesa servida.</p>
-  </div>
-</section>
-
-<section class="pilares">
+ <section class="pilares">
   <div class="pilares-inner">
-    <div class="pilares-head">
-      <h2 class="pilares-titulo">Cómo trabajo</h2>
+
+    <div>
+      <div class="pilares-head">
+        <h2 class="pilares-titulo">Cómo trabajo</h2>
+      </div>
+
+      <ul class="checklist-proceso">
+        <li><span>✓</span> Analizo tu marca</li>
+        <li><span>✓</span> Planteo objetivos</li>
+        <li><span>✓</span> Defino el tipo de contenido</li>
+        <li><span>✓</span> Organizo la idea, el estilo y cómo comunicar</li>
+        <li><span>✓</span> Empiezo con la creación</li>
+        <li><span>✓</span> Entrego el material listo para cumplir tus objetivos</li>
+      </ul>
     </div>
-    <ul class="checklist-proceso">
-      <li><span>✓</span> Analizo tu marca</li>
-      <li><span>✓</span> Planteo objetivos</li>
-      <li><span>✓</span> Defino el tipo de contenido</li>
-      <li><span>✓</span> Organizo la idea, el estilo y cómo comunicar</li>
-      <li><span>✓</span> Empiezo con la creación</li>
-      <li><span>✓</span> Entrego el material listo para cumplir tus objetivos</li>
-    </ul>
+
+    <div class="pilares-img">
+      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/WhatsApp Image 2026-06-30 at 21.36.29.jpg" alt="Proceso de trabajo">
+    </div>
+
   </div>
 </section>
 
