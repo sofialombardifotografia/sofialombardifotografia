@@ -247,9 +247,10 @@ img { max-width: 100%; display: block; }
 }
 
 .dropdown > a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
+  vertical-align: middle;
 }
 
 .arrow {
