@@ -298,3 +298,20 @@ img { max-width: 100%; display: block; }
   color: var(--naranja);
   background: rgba(0,0,0,0.03);
 }
+@media (max-width: 880px) {
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    border-top: none;
+    padding: 0;
+    margin-top: 10px;
+    display: none;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+}
