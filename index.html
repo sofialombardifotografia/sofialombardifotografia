@@ -5,133 +5,154 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>contenidovisual.ok · Contenido gastronómico estratégico</title>
 <link rel="stylesheet" href="styles.css">
+
 <style>
+/* ===== HERO ===== */
+.hero {
+  padding: 100px 32px 90px;
+  position: relative;
+  overflow: hidden;
+}
 
-  /* ===== HERO ===== */
-  .hero {
-    padding: 100px 32px 90px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 56px;
-    align-items: center;
-  }
-
-  .hero-slogan {
-    font-family: var(--serif);
-    font-size: clamp(40px, 6vw, 64px);
-    line-height: 1.04;
-    letter-spacing: -0.01em;
-    margin-bottom: 26px;
-  }
-
-  .hero-slogan em {
-    font-style: italic;
-    font-weight: 400;
-    color: var(--carbon);
-  }
-
-  .hero-slogan strong em {
-    font-style: italic;
-    font-weight: 700;
-    color: var(--naranja);
-  }
-
-  .hero-propuesta {
-    font-size: 17px;
-    color: #4A3F32;
-    font-weight: 400;
-    max-width: 480px;
-    line-height: 1.65;
-    margin-bottom: 34px;
-  }
-
-  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-
-  .hero-img-stack {
-    position: relative;
-    aspect-ratio: 3 / 4;
-  }
-
-  .hero-img-stack img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    border-radius: 4px;
-  }
-
-  .ph-img {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    color: var(--mid);
-    font-size: 12px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .ph-img-small {
-    position: absolute;
-    width: 42%;
-    aspect-ratio: 1;
-    bottom: -24px;
-    left: -28px;
-    border: 4px solid var(--gris);
-    box-shadow: 0 8px 24px rgba(43,34,26,0.12);
-    object-fit: cover;
-    border-radius: 4px;
-  }
-
-  /* ===== INTRO ===== */
-  .intro {
-    padding: 70px 32px 80px;
-    border-top: 1px solid var(--rule);
-  }
-
-  .intro-inner {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .intro-inner p {
-    font-size: 18px;
-    font-family: var(--serif);
-    font-weight: 400;
-    line-height: 1.6;
-    color: var(--carbon);
-  }
-
-  .intro-inner p strong {
-    font-weight: 600;
-    color: var(--naranja);
-  }
-
-  /* ===== PROCESO / CHECKLIST ===== */
-  .pilares {
-    padding: 0 32px 90px;
-  }
-
- .pilares-inner {
+.hero-inner {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.4fr 0.6fr;
-  gap: 60px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
   align-items: center;
+}
+
+.hero-slogan {
+  font-family: var(--serif);
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  margin-bottom: 26px;
+}
+
+.hero-slogan em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--carbon);
+}
+
+.hero-slogan strong em {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--naranja);
+}
+
+.hero-propuesta {
+  font-size: 17px;
+  color: #4A3F32;
+  font-weight: 400;
+  max-width: 480px;
+  line-height: 1.65;
+  margin-bottom: 34px;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-img-stack {
+  position: relative;
+  aspect-ratio: 3 / 4;
+}
+
+.hero-img-stack img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+}
+
+/* ===== INTRO ===== */
+
+.intro {
+  padding: 70px 32px 80px;
+  border-top: 1px solid var(--rule);
+}
+
+.intro-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-inner p {
+  font-size: 18px;
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--carbon);
+}
+
+.intro-inner p strong {
+  font-weight: 600;
+  color: var(--naranja);
+}
+
+/* ===== CÓMO TRABAJO ===== */
+
+.pilares {
+  padding: 0 32px 90px;
+}
+
+.pilares-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  gap: 70px;
+  align-items: center;
+}
+
+.pilares-head {
+  margin-bottom: 40px;
+}
+
+.pilares-titulo {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.checklist-proceso {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist-proceso li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 16px;
+  color: var(--carbon);
+}
+
+.checklist-proceso li:last-child {
+  border-bottom: none;
+}
+
+.checklist-proceso li span {
+  color: var(--naranja);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.pilares-img {
+  width: 100%;
+  max-width: 350px;
+  justify-self: end;
 }
 
 .pilares-img img {
@@ -139,134 +160,121 @@
   aspect-ratio: 3/4;
   object-fit: cover;
   border-radius: 4px;
+  display: block;
 }
 
+/* ===== PREVIEW ===== */
+
+.preview {
+  padding: 0 32px 90px;
+}
+
+.preview-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.preview-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 32px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.preview-titulo {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 600;
+}
+
+.preview-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.preview-link {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--naranja);
+  border-bottom: 1.5px solid var(--naranja);
+  padding-bottom: 3px;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.preview-grid img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* ===== RESPONSIVE ===== */
+
 @media (max-width: 880px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-img-stack {
+    max-width: 420px;
+    margin: 0 auto;
+    order: -1;
+  }
+
   .pilares-inner {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .pilares-img {
-  max-width: 350px;
-  justify-self: end;
-}
-}
-
-  .pilares-head { margin-bottom: 40px; max-width: 560px; }
-
-  .pilares-titulo {
-    font-family: var(--serif);
-    font-size: clamp(28px, 4vw, 38px);
-    font-weight: 600;
-    line-height: 1.1;
-  }
-
-  .checklist-proceso {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  max-width: none;
-}
-
-  .checklist-proceso li {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 18px 0;
-    border-bottom: 1px solid var(--rule);
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--carbon);
-  }
-
-  .checklist-proceso li:last-child { border-bottom: none; }
-
-  .checklist-proceso li span {
-    color: var(--naranja);
-    font-size: 20px;
-    font-weight: 700;
-    flex-shrink: 0;
-    line-height: 1;
-  }
-
-  /* ===== PREVIEW GALERÍA ===== */
-  .preview {
-    padding: 0 32px 90px;
-  }
-
-  .preview-inner { max-width: 1100px; margin: 0 auto; }
-
-  .preview-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 32px;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .preview-titulo {
-    font-family: var(--serif);
-    font-size: clamp(28px, 4vw, 38px);
-    font-weight: 600;
-  }
-
-  .preview-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .preview-link {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--naranja);
-    border-bottom: 1.5px solid var(--naranja);
-    padding-bottom: 3px;
-    white-space: nowrap;
+    max-width: 420px;
+    margin: 0 auto;
+    justify-self: center;
   }
 
   .preview-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    padding: 64px 20px 56px;
   }
 
-  .preview-grid .ph-img { aspect-ratio: 3/4; font-size: 10px; padding: 10px; }
-
-  .preview-grid img {
-    aspect-ratio: 3/4;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 4px;
+  .intro {
+    padding: 50px 20px 56px;
   }
 
-  @media (max-width: 880px) {
-    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-    .hero-img-stack { max-width: 420px; margin: 0 auto; order: -1; }
-    .preview-grid { grid-template-columns: repeat(2, 1fr); }
+  .pilares,
+  .preview {
+    padding: 0 20px 64px;
   }
-
-  @media (max-width: 560px) {
-    .hero { padding: 64px 20px 56px; }
-    .intro { padding: 50px 20px 56px; }
-    .pilares, .preview { padding: 0 20px 64px; }
-    .ph-img-small { display: none; }
-  }
+}
 </style>
 </head>
+
 <body>
 
 <nav class="site-nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">contenido<span>visual</span>.ok</a>
+
     <button class="nav-toggle" aria-label="Abrir menú">
       <span></span><span></span><span></span>
     </button>
+
     <ul class="nav-links">
       <li><a href="index.html" class="active">Inicio</a></li>
       <li><a href="gastronomia.html">Gastronomía</a></li>
@@ -279,23 +287,37 @@
 <header class="hero">
   <div class="hero-inner">
     <div>
-      <h1 class="hero-slogan"><em>Contenido<br>gastronómico</em><br><strong><em>estratégico</em></strong></h1>
-      <p class="hero-propuesta">Ayudo a restaurantes y locales gastronómicos independientes de Córdoba a que su comida se vea tan bien como sabe, a través de fotografía estratégica, pensada para vender, no solo para verse linda.</p>
+      <h1 class="hero-slogan">
+        <em>Contenido<br>gastronómico</em><br>
+        <strong><em>estratégico</em></strong>
+      </h1>
+
+      <p class="hero-propuesta">
+        Ayudo a restaurantes y locales gastronómicos independientes de Córdoba a que su comida se vea tan bien como sabe, a través de fotografía estratégica, pensada para vender, no solo para verse linda.
+      </p>
+
       <div class="hero-ctas">
         <a href="gastronomia.html" class="btn btn-primary">Ver trabajos</a>
         <a href="contacto.html" class="btn btn-outline">Hablemos de tu local</a>
       </div>
     </div>
+
     <div class="hero-img-stack">
-<img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC6488.jpg" alt="Fotografía gastronómica">      </div>
+      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC6488.jpg" alt="Fotografía gastronómica">
     </div>
   </div>
 </header>
 
 <section class="intro">
   <div class="intro-inner">
-    <p>La mayoría de los locales con buen producto pierden clientes antes de que entren por la puerta, porque la foto que ven en redes no representa lo que realmente sirven. <strong>Mi trabajo es cerrar esa distancia</strong>: que la imagen genere las mismas ganas que genera la mesa servida.</p>
- <section class="pilares">
+    <p>
+      La mayoría de los locales con buen producto pierden clientes antes de que entren por la puerta, porque la foto que ven en redes no representa lo que realmente sirven.
+      <strong>Mi trabajo es cerrar esa distancia</strong>: que la imagen genere las mismas ganas que genera la mesa servida.
+    </p>
+  </div>
+</section>
+
+<section class="pilares">
   <div class="pilares-inner">
 
     <div>
@@ -314,7 +336,7 @@
     </div>
 
     <div class="pilares-img">
-      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/WhatsApp Image 2026-06-30 at 21.36.29.jpeg" alt="Proceso de trabajo">
+      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/WhatsApp%20Image%202026-06-30%20at%2021.36.29.jpeg" alt="Proceso de trabajo">
     </div>
 
   </div>
@@ -324,18 +346,18 @@
   <div class="preview-inner">
     <div class="preview-head">
       <h2 class="preview-titulo">Trabajos recientes</h2>
+
       <div class="preview-links">
         <a href="gastronomia.html" class="preview-link">Ver gastronomía →</a>
         <a href="producto.html" class="preview-link">Ver producto →</a>
       </div>
     </div>
+
     <div class="preview-grid">
-      <!-- REEMPLAZAR: 4 fotos destacadas, formato vertical 3:4 -->
-      <!-- Ejemplo: <img src="preview1.jpg" alt="Fotografía gastronómica"> -->
-     <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC6583.jpg" alt="Fotografía gastronómica">
-      <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC8091.jpg" alt="Fotografía gastronómica">
-      <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC2934.jpg" alt="Fotografía gastronómica">
-      <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC6556 (1).jpg" alt="Fotografía gastronómica">
+      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC6583.jpg" alt="">
+      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC8091.jpg" alt="">
+      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC2934.jpg" alt="">
+      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC6556%20(1).jpg" alt="">
     </div>
   </div>
 </section>
@@ -343,11 +365,11 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <span class="footer-text">contenidovisual.ok · Córdoba, Argentina</span>
+
     <ul class="footer-links">
-      <!-- REEMPLAZAR: poné tu link real de Instagram y TikTok -->
-      <li><a href="https://www.instagram.com/contenidovisual.ok/" target="_blank" rel="noopener">Instagram</a></li>
-      <li><a href="https://www.tiktok.com/@contenidovisual.ok" target="_blank" rel="noopener">TikTok</a></li>
-      <li><a href="https://wa.me/5493548611214" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><a href="https://www.instagram.com/contenidovisual.ok/" target="_blank">Instagram</a></li>
+      <li><a href="https://www.tiktok.com/@contenidovisual.ok" target="_blank">TikTok</a></li>
+      <li><a href="https://wa.me/5493548611214" target="_blank">WhatsApp</a></li>
     </ul>
   </div>
 </footer>
