@@ -72,14 +72,13 @@
 }
 
 /* ===== INTRO ===== */
-
 .intro {
   padding: 70px 32px 80px;
   border-top: 1px solid var(--rule);
 }
 
 .intro-inner {
-  max-width: 700px;
+  max-width: 1100px;
   margin: 0 auto;
   text-align: center;
 }
@@ -90,6 +89,8 @@
   font-weight: 400;
   line-height: 1.6;
   color: var(--carbon);
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .intro-inner p strong {
@@ -98,9 +99,8 @@
 }
 
 /* ===== CÓMO TRABAJO ===== */
-
 .pilares {
-  padding: 0;
+  padding: 0 32px 60px;
 }
 
 .pilares-inner {
@@ -117,9 +117,9 @@
   justify-self: end;
 }
 
-.pilares-head,
-.checklist-proceso {
+.pilares-head {
   max-width: 550px;
+  margin-bottom: 24px;
 }
 
 .pilares-img img {
@@ -136,11 +136,12 @@
   font-weight: 600;
   line-height: 1.1;
 }
-  
+
 .checklist-proceso {
   list-style: none;
   padding: 0;
   margin: 0;
+  max-width: 550px;
 }
 
 .checklist-proceso li {
@@ -164,9 +165,9 @@
 }
 
 /* ===== PREVIEW ===== */
-
 .preview {
-  padding: 0 32px 90px;
+  padding: 40px 32px 60px;
+  border-top: 1px solid var(--rule);
 }
 
 .preview-inner {
@@ -219,7 +220,6 @@
 }
 
 /* ===== RESPONSIVE ===== */
-
 @media (max-width: 880px) {
   .hero-inner {
     grid-template-columns: 1fr;
@@ -241,6 +241,7 @@
     max-width: 420px;
     margin: 0 auto;
     justify-self: center;
+    width: 100%;
   }
 
   .preview-grid {
@@ -249,18 +250,10 @@
 }
 
 @media (max-width: 560px) {
-  .hero {
-    padding: 64px 20px 56px;
-  }
-
-  .intro {
-    padding: 50px 20px 56px;
-  }
-
-  .pilares,
-  .preview {
-    padding: 0 20px 64px;
-  }
+  .hero { padding: 64px 20px 56px; }
+  .intro { padding: 50px 20px 56px; }
+  .pilares { padding: 0 20px 48px; }
+  .preview { padding: 32px 20px 48px; }
 }
 </style>
 </head>
@@ -275,21 +268,18 @@
       <span></span><span></span><span></span>
     </button>
 
-  <ul class="nav-links">
-  <li><a href="index.html" class="active">Inicio</a></li>
-
-  <li class="dropdown">
-    <a href="#">Portfolio <span class="arrow">⌄</span></a>
-
-    <ul class="dropdown-menu">
-      <li><a href="gastronomia.html">Gastronomía</a></li>
-      <li><a href="producto.html">Producto</a></li>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li class="dropdown">
+        <a href="#">Portfolio <span class="arrow">⌄</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="gastronomia.html">Gastronomía</a></li>
+          <li><a href="producto.html">Producto</a></li>
+        </ul>
+      </li>
+      <li><a href="sobre-mi.html">Sobre mí</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
     </ul>
-  </li>
-
-  <li><a href="sobre-mi.html">Sobre mí</a></li>
-  <li><a href="contacto.html">Contacto</a></li>
-</ul>
   </div>
 </nav>
 
@@ -306,7 +296,7 @@
       </p>
 
       <div class="hero-ctas">
-        <a href="gastronomia.html" class="btn btn-primary">Ver trabajos</a>
+        <a href="gastronomia.html" class="btn btn-outline">Ver trabajos</a>
         <a href="contacto.html" class="btn btn-outline">Hablemos de tu local</a>
       </div>
     </div>
@@ -328,12 +318,10 @@
 
 <section class="pilares">
   <div class="pilares-inner">
-
     <div>
       <div class="pilares-head">
         <h2 class="pilares-titulo">Cómo trabajo</h2>
       </div>
-
       <ul class="checklist-proceso">
         <li><span>✓</span> Analizo tu marca</li>
         <li><span>✓</span> Planteo objetivos</li>
@@ -347,7 +335,6 @@
     <div class="pilares-img">
       <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/WhatsApp%20Image%202026-06-30%20at%2021.36.29.jpeg" alt="Proceso de trabajo">
     </div>
-
   </div>
 </section>
 
@@ -355,7 +342,6 @@
   <div class="preview-inner">
     <div class="preview-head">
       <h2 class="preview-titulo">Trabajos recientes</h2>
-
       <div class="preview-links">
         <a href="gastronomia.html" class="preview-link">Ver gastronomía →</a>
         <a href="producto.html" class="preview-link">Ver producto →</a>
@@ -363,10 +349,10 @@
     </div>
 
     <div class="preview-grid">
-      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC6583.jpg" alt="">
-      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC2934.jpg" alt="">
-      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC8091.jpg" alt="">
-      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC6556 (1).jpg" alt="">
+      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC6583.jpg" alt="Fotografía gastronómica">
+      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC2934.jpg" alt="Fotografía gastronómica">
+      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC8091.jpg" alt="Fotografía gastronómica">
+      <img src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC6556 (1).jpg" alt="Fotografía gastronómica">
     </div>
   </div>
 </section>
@@ -374,11 +360,10 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <span class="footer-text">contenidovisual.ok · Córdoba, Argentina</span>
-
     <ul class="footer-links">
-      <li><a href="https://www.instagram.com/contenidovisual.ok/" target="_blank">Instagram</a></li>
-      <li><a href="https://www.tiktok.com/@contenidovisual.ok" target="_blank">TikTok</a></li>
-      <li><a href="https://wa.me/5493548611214" target="_blank">WhatsApp</a></li>
+      <li><a href="https://www.instagram.com/contenidovisual.ok/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.tiktok.com/@contenidovisual.ok" target="_blank" rel="noopener">TikTok</a></li>
+      <li><a href="https://wa.me/5493548611214" target="_blank" rel="noopener">WhatsApp</a></li>
     </ul>
   </div>
 </footer>
