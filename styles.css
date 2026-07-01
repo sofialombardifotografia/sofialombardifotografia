@@ -239,3 +239,62 @@ img { max-width: 100%; display: block; }
   .container { padding: 0 20px; }
   .footer-inner { padding: 0 0; }
 }
+
+/* ===== MENÚ DESPLEGABLE PORTFOLIO ===== */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown > a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.arrow {
+  font-size: 12px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+
+  background: white;
+  min-width: 220px;
+  list-style: none;
+  padding: 12px 0;
+  margin: 12px 0 0 0;
+
+  border: 1px solid var(--rule);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 24px;
+  color: var(--carbon);
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  color: var(--naranja);
+  background: rgba(0,0,0,0.03);
+}
