@@ -3,16 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Producto · contenidovisual.ok</title>
+<title>Gastronomía · contenidovisual.ok</title>
 <link rel="stylesheet" href="styles.css">
-<style>
 
+<style>
   .page-head {
     padding: 64px 32px 50px;
     border-bottom: 1px solid var(--rule);
   }
 
-  .page-head-inner { max-width: 1100px; margin: 0 auto; }
+  .page-head-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
   .page-titulo {
     font-family: var(--serif);
@@ -29,68 +32,58 @@
     line-height: 1.7;
   }
 
-  .galeria-producto {
-    padding: 60px 32px 90px;
+  .galeria-suelta {
+    padding: 70px 32px 90px;
   }
 
-  .gp-inner { max-width: 1100px; margin: 0 auto; }
+  .gs-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
-  .gp-grid {
+  .gs-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 14px;
   }
 
- .gp-grid .ph-img,
-.gp-grid img.ph-img { aspect-ratio: 3/4; }
-
-.gp-grid img.ph-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-object-position: center top;
-}
-
-  .gp-grid .ph-img.tall { aspect-ratio: 3/4; }
-
-  .nota-servicio {
-    margin-top: 60px;
-    padding: 28px 30px;
-    background: var(--crema-2);
-    border-left: 3px solid var(--mostaza);
-    border-radius: 0 4px 4px 0;
-    max-width: 640px;
-  }
-
-  .nota-servicio p {
-    font-size: 14px;
-    color: #4A3F32;
-    line-height: 1.7;
-  }
-
-  @media (max-width: 880px) {
-    .gp-grid { grid-template-columns: repeat(3, 1fr); }
+  .gs-grid .ph-img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
   }
 
   @media (max-width: 560px) {
-    .page-head { padding: 48px 20px 40px; }
-    .galeria-producto { padding: 44px 20px 64px; }
-    .gp-grid { grid-template-columns: repeat(2, 1fr); }
+    .page-head {
+      padding: 48px 20px 40px;
+    }
+
+    .galeria-suelta {
+      padding: 40px 20px 64px;
+    }
+
+    .gs-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 </style>
 </head>
+
 <body>
 
 <nav class="site-nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">contenido<span>visual</span>.ok</a>
+
     <button class="nav-toggle" aria-label="Abrir menú">
       <span></span><span></span><span></span>
     </button>
+
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="gastronomia.html">Gastronomía</a></li>
-      <li><a href="producto.html" class="active">Producto</a></li>
+      <li><a href="gastronomia.html" class="active">Gastronomía</a></li>
+      <li><a href="producto.html">Producto</a></li>
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </div>
@@ -99,40 +92,45 @@ object-position: center top;
 <header class="page-head">
   <div class="page-head-inner">
     <div class="eyebrow">Portfolio</div>
-    <h1 class="page-titulo">Fotografía de producto</h1>
-    <p class="page-desc">Sesiones de producto para marcas que necesitan imágenes limpias y consistentes para su catálogo, redes o sitio web.</p>
+    <h1 class="page-titulo">Producto</h1>
+    <p class="page-desc">
+      Fotografía pensada para marcas con productos únicos.
+    </p>
   </div>
 </header>
 
-<section class="galeria-producto">
-  <div class="gp-inner">
-    <div class="gp-grid">
-      <!--
-        REEMPLAZAR: cargá tus fotos de producto acá.
-        Usá la clase "tall" en algunas si querés variar el ritmo
-        visual de la grilla (ej: class="ph-img tall")
-      -->
-      <img class="ph-img" src="_DSC8072.jpg" alt="Fotografía de producto">
-      <div class="ph-img tall"><span>📷</span><span>Foto</span></div>
-      <div class="ph-img"><span>📷</span><span>Foto</span></div>
-      <div class="ph-img"><span>📷</span><span>Foto</span></div>
-      <div class="ph-img tall"><span>📷</span><span>Foto</span></div>
-      <div class="ph-img"><span>📷</span><span>Foto</span></div>
-      <div class="ph-img"><span>📷</span><span>Foto</span></div>
-      <div class="ph-img"><span>📷</span><span>Foto</span></div>
+<section class="galeria-suelta">
+  <div class="gs-inner">
+
+    <div class="gs-grid">
+      <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC4622 (1).jpg" alt="Fotografía gastronómica">
+
+      <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC4654 (1) (1).jpg" alt="Fotografía gastronómica">
+
+      <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC4737 (2).jpg" alt="Fotografía gastronómica">
+
+      <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC8087.jpg" alt="Fotografía gastronómica">
+
+      <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC8085.jpg" alt="Fotografía gastronómica">
+
+      <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC8091.jpg" alt="Fotografía gastronómica">
+
+      <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC6667.jpg" alt="Fotografía gastronómica">
+
+      <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC6882 (1).jpg" alt="Fotografía gastronómica">
+
+      <img class="ph-img" src="https://raw.githubusercontent.com/sofialombardifotografia/sofialombardifotografia/main/_DSC6556 (1).jpg" alt="Fotografía gastronómica">
     </div>
 
-    <div class="nota-servicio">
-      <p>La fotografía de producto se trabaja como servicio puntual. Si tu local también necesita diseño o estrategia de contenido más allá de las fotos, <a href="contacto.html" style="color:var(--terracota); font-weight:600;">contame en el mensaje</a> y lo vemos juntas.</p>
-    </div>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="footer-inner">
     <span class="footer-text">contenidovisual.ok · Córdoba, Argentina</span>
+
     <ul class="footer-links">
-       <li><a href="https://www.instagram.com/contenidovisual.ok/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.instagram.com/contenidovisual.ok/" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.tiktok.com/@contenidovisual.ok" target="_blank" rel="noopener">TikTok</a></li>
       <li><a href="https://wa.me/5493548611214" target="_blank" rel="noopener">WhatsApp</a></li>
     </ul>
@@ -140,5 +138,6 @@ object-position: center top;
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
