@@ -107,27 +107,26 @@
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
+  grid-template-columns: 380px minmax(0, 1fr);
   gap: 56px;
-  align-items: center;
+  align-items: stretch;
 }
 
 .pilares-img {
-  width: 280px;
-  justify-self: end;
-}
-
-.pilares-head {
-  max-width: 550px;
-  margin-bottom: 24px;
+  width: 100%;
+  order: -1;
 }
 
 .pilares-img img {
   width: 100%;
-  aspect-ratio: 3/4;
+  height: 100%;
   object-fit: cover;
   border-radius: 4px;
   display: block;
+}
+.pilares-head {
+  max-width: 550px;
+  margin-bottom: 24px;
 }
 
 .pilares-titulo {
