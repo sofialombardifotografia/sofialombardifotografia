@@ -191,7 +191,7 @@ img { max-width: 100%; display: block; }
 
 .btn-outline:hover {
   background: var(--carbon);
-  color: var(--gris);
+  color: var(--naranja);
 }
 
 /* ===== EYEBROW ===== */
