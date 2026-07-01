@@ -243,6 +243,8 @@ img { max-width: 100%; display: block; }
 /* ===== MENÚ DESPLEGABLE PORTFOLIO ===== */
 
 .dropdown {
+  display: flex;
+  align-items: center;
   position: relative;
 }
 
