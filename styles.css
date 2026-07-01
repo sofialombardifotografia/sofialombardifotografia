@@ -304,3 +304,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 560px) {
   .container { padding: 0 20px; }
 }
+.bajada {
+  font-style: italic;
+  margin-bottom: 36px;
+}
