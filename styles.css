@@ -285,14 +285,20 @@ img { max-width: 100%; display: block; }
     position: static;
     box-shadow: none;
     border: none;
-    border-radius: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
     background: rgba(255,149,125,0.04);
     padding: 0;
-    display: block;
     max-height: 0;
     overflow: hidden;
+    transition: max-height 0.3s ease;
+    display: block;
   }
-
+.dropdown.open .dropdown-menu {
+    max-height: 200px;
+  }
+}
   .dropdown-menu li a {
     padding: 12px 48px;
     border-bottom: 1px solid var(--rule);
